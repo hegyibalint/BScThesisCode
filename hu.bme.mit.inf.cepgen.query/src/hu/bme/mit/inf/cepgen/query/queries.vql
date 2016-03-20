@@ -1,0 +1,18 @@
+package hu.bme.mit.inf.cepgen.query
+
+import "http://www.example.org/EventAutomatonModel"
+
+pattern EpsilonTransition(a: Automaton) {
+	Automaton.states.incomingTransitions(a, t);
+	EpsilonTransition(t);
+} or {
+	Automaton.states.outgoingTransitions(a, t);
+	EpsilonTransition(t);
+}
+
+pattern AcceptorState(a: Automaton, s: State) {
+	Automaton.states(a, s);
+	State.acceptor(s, acceptor);
+	acceptor == true;
+}
+
