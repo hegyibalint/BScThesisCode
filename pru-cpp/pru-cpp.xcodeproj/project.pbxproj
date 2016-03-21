@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F9438981C9ECA510082681E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F9438971C9ECA510082681E /* main.cpp */; };
+		5F9438A01C9ECACC0082681E /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F94389E1C9ECACC0082681E /* State.cpp */; };
+		5F9438A31C9ECAD50082681E /* Transition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F9438A11C9ECAD50082681E /* Transition.cpp */; };
+		5F9438AA1C9F1CAB0082681E /* Automaton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F9438A81C9F1CAB0082681E /* Automaton.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		5F9438941C9ECA510082681E /* pru-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pru-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9438971C9ECA510082681E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5F94389E1C9ECACC0082681E /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		5F94389F1C9ECACC0082681E /* State.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
+		5F9438A11C9ECAD50082681E /* Transition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transition.cpp; sourceTree = "<group>"; };
+		5F9438A21C9ECAD50082681E /* Transition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transition.hpp; sourceTree = "<group>"; };
+		5F9438A71C9F11330082681E /* Signal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Signal.hpp; sourceTree = "<group>"; };
+		5F9438A81C9F1CAB0082681E /* Automaton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Automaton.cpp; sourceTree = "<group>"; };
+		5F9438A91C9F1CAB0082681E /* Automaton.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Automaton.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,13 @@
 		5F9438961C9ECA510082681E /* pru-cpp */ = {
 			isa = PBXGroup;
 			children = (
+				5F9438A81C9F1CAB0082681E /* Automaton.cpp */,
+				5F9438A91C9F1CAB0082681E /* Automaton.hpp */,
+				5F9438A71C9F11330082681E /* Signal.hpp */,
+				5F94389E1C9ECACC0082681E /* State.cpp */,
+				5F94389F1C9ECACC0082681E /* State.hpp */,
+				5F9438A11C9ECAD50082681E /* Transition.cpp */,
+				5F9438A21C9ECAD50082681E /* Transition.hpp */,
 				5F9438971C9ECA510082681E /* main.cpp */,
 			);
 			path = "pru-cpp";
@@ -119,6 +136,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F9438981C9ECA510082681E /* main.cpp in Sources */,
+				5F9438A31C9ECAD50082681E /* Transition.cpp in Sources */,
+				5F9438AA1C9F1CAB0082681E /* Automaton.cpp in Sources */,
+				5F9438A01C9ECACC0082681E /* State.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +227,9 @@
 		5F94389C1C9ECA510082681E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				GCC_WARN_PEDANTIC = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +237,9 @@
 		5F94389D1C9ECA510082681E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				GCC_WARN_PEDANTIC = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

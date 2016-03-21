@@ -1,15 +1,25 @@
-//
-//  main.cpp
-//  pru-cpp
-//
-//  Created by Hegyi Bálint on 20/03/16.
-//  Copyright © 2016 Hegyi Bálint. All rights reserved.
-//
+//#include <iostream>
 
-#include <iostream>
+#include "Automaton.hpp"
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
-    return 0;
+	Automaton_A automaton;
+	automaton.init();
+	
+//	std::cout << "SIGNAL_A" << std::endl;
+	automaton.step(SIGNAL_A);
+//	std::cout << "SIGNAL_A" << std::endl;
+	automaton.step(SIGNAL_A);
+//	std::cout << "SIGNAL_B" << std::endl;
+	automaton.step(SIGNAL_B);
+//	std::cout << "SIGNAL_B" << std::endl;
+	automaton.step(SIGNAL_B);
+//	std::cout << "SIGNAL_B" << std::endl;
+	automaton.step(SIGNAL_B);
+//	std::cout << "SIGNAL_B" << std::endl;
+	automaton.step(SIGNAL_B);
+//	std::cout << "SIGNAL_B" << std::endl;
+	automaton.step(SIGNAL_B);
+//	std::cout << "SIGNAL_B" << std::endl;
+	automaton.step(SIGNAL_B);
 }

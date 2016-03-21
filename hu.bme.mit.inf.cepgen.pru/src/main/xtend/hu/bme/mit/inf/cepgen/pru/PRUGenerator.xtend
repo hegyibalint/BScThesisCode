@@ -11,7 +11,7 @@ class PRUGenerator extends AbstractGenerator {
 
 	override validate(ComplexEventProcessor cep, ViatraQueryEngine qe) {
 		if (Queries.instance.getEpsilonTransition(qe).countMatches > 0) {
-			throw new FeatureNotSupported("Nope")
+			throw new FeatureNotSupported("Epsilon transition are not supported")
 		}
 	}
 
